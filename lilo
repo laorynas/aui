@@ -429,7 +429,7 @@ add_custom_repositories(){
           pause_function
           ;;
         "d")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -824,7 +824,7 @@ install_additional_firmwares(){
             package_install "libraw1394"
             ;;
           "d")
-            break
+            break 2
             ;;
           *)
             invalid_option
@@ -854,7 +854,7 @@ install_desktop_environment(){
             aur_package_install "numix-icon-theme-git numix-circle-icon-theme-git"
             ;;
           "b")
-            break
+            break 2
             ;;
           *)
             invalid_option
@@ -880,7 +880,7 @@ install_desktop_environment(){
             aur_package_install "gtk-theme-arc-git "
             ;;
           "b")
-            break
+            break 2
             ;;
           *)
             invalid_option
@@ -932,7 +932,7 @@ install_desktop_environment(){
             system_ctl enable slim
             ;;
           "b")
-            break
+            break 2
             ;;
           *)
             invalid_option
@@ -964,7 +964,7 @@ install_desktop_environment(){
             OPT=2
             ;;
           "d")
-            break
+            break 2
             ;;
           *)
             invalid_option
@@ -1039,7 +1039,7 @@ install_desktop_environment(){
             aur_package_install "speedtest-cli"
             ;;
           "d")
-            break
+            break 2
             ;;
           *)
             invalid_option
@@ -1167,7 +1167,7 @@ install_desktop_environment(){
               aur_package_install "yakuake-skin-plasma-oxygen-panel"
               ;;
             "d")
-              break
+              break 2
               ;;
             *)
               invalid_option
@@ -1484,7 +1484,7 @@ install_accessories_apps(){
           aur_package_install "terminix"
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -1565,7 +1565,7 @@ install_development_apps(){
           package_install "nodejs"
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -1649,7 +1649,7 @@ install_office_apps(){
           package_install "xmind"
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -1751,7 +1751,7 @@ install_system_apps(){
           package_install "icoutils wine wine_gecko wine-mono winetricks"
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -1815,7 +1815,7 @@ install_graphics_apps(){
           package_install "simple-scan"
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -1884,7 +1884,7 @@ install_internet_apps(){
                   package_install "opera"
                   ;;
                 "b")
-                  break
+                  break 2
                   ;;
                 *)
                   invalid_option
@@ -1965,7 +1965,7 @@ install_internet_apps(){
                   package_install "youtube-dl"
                   ;;
                 "b")
-                  break
+                  break 2
                   ;;
                 *)
                   invalid_option
@@ -1998,7 +1998,7 @@ install_internet_apps(){
                   package_install "thunderbird thunderbird-i18n-$LOCALE_TB"
                   ;;
                 "b")
-                  break
+                  break 2
                   ;;
                 *)
                   invalid_option
@@ -2059,7 +2059,7 @@ install_internet_apps(){
                   aur_package_install "qtox-git"
                   ;;
                 "b")
-                  break
+                  break 2
                   ;;
                 *)
                   invalid_option
@@ -2092,7 +2092,7 @@ install_internet_apps(){
                   aur_package_install "worldwind"
                   ;;
                 "b")
-                  break
+                  break 2
                   ;;
                 *)
                   invalid_option
@@ -2125,7 +2125,7 @@ install_internet_apps(){
                   aur_package_install "teamviewer"
                   ;;
                 "b")
-                  break
+                  break 2
                   ;;
                 *)
                   invalid_option
@@ -2138,7 +2138,7 @@ install_internet_apps(){
           OPT=6
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -2238,7 +2238,7 @@ install_audio_apps(){
                   package_install "quodlibet"
                   ;;
                 "b")
-                  break
+                  break 2
                   ;;
                 *)
                   invalid_option
@@ -2283,7 +2283,7 @@ install_audio_apps(){
                   fi
                   ;;
                 "b")
-                  break
+                  break 2
                   ;;
                 *)
                   invalid_option
@@ -2306,7 +2306,7 @@ install_audio_apps(){
           run_as_user "gconftool-2 --type string --set /system/gstreamer/0.10/audio/profiles/mp3/pipeline \audio/x-raw-int,rate=44100,channels=2 ! lame name=enc preset=1001 ! id3v2mux\""
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -2383,7 +2383,7 @@ install_video_apps(){
                   add_user_to_group ${username} kodi
                   ;;
                 "b")
-                  break
+                  break 2
                   ;;
                 *)
                   invalid_option
@@ -2452,7 +2452,7 @@ install_video_apps(){
                   package_install "transmageddon"
                   ;;
                 "b")
-                  break
+                  break 2
                   ;;
                 *)
                   invalid_option
@@ -2475,7 +2475,7 @@ install_video_apps(){
           package_install "ffmpeg"
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -2514,7 +2514,7 @@ install_games(){
           OPT=3
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -2705,7 +2705,7 @@ install_fonts(){
           package_install "wqy-microhei"
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
@@ -2800,7 +2800,7 @@ install_extra(){
           run_as_user "systemctl --user enable psd.service"
           ;;
         "b")
-          break
+          break 2
           ;;
         *)
           invalid_option
